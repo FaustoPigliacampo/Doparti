@@ -41,6 +41,22 @@ def register(request):
     return render(request, 'accounts/registration_form.html', args)
 
 
+def login_funcion(request):
+    username = request.POST['username']
+    password = request.POST['password']
+    user = authenticate(request, username=username, password=password)
+    if user is not None:
+        login(request, user)
+        # Redirect to a success page.
+        return redirect(request,'main.html')
+    else:
+        # Return an 'invalid login' error message.
+        return 
+
+
+
+
+
 
 def login(request, user, backend=None):
     session_auth_hash = ''
