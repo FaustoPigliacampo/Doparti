@@ -1,0 +1,64 @@
+<html>
+        <head>
+                <link rel="stylesheet" href="https://getbootstrap.com/dist/css/bootstrap.min.css">
+                <link href="https://getbootstrap.com/docs/4.0/examples/cover/cover.css" rel="stylesheet">
+                <meta charset="utf-8">
+                <meta name="description" content="">
+                <meta name="author" content="">
+                
+              </head>
+              
+              <style> 
+              body {
+              padding-top: 5rem;
+            }
+            .starter-template {
+              padding: 3rem 1.5rem;
+              text-align: center;
+              font-size: 2rem;
+            }
+            
+            .master-brand{
+              text-align: center;
+            }
+            
+            }
+              </style>
+
+<body>
+    <div class="site-wrapper">
+        
+              <div class="site-wrapper-inner">
+        
+                <div class="cover-container">
+        
+                  <div class="masthead clearfix">
+                    <div class="inner">
+                      <h3 class="masthead-brand">PartidoYa!</h3>
+                      <li><a href="">User : {{ user|upper }}</a></li>
+                      <nav class="nav nav-masthead">
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    </div>   
+    
+    
+
+
+
+{% load i18n %}
+    {% block body %}
+        <h1>Registrarse</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+            <button type="submit">Registrarse</button>
+            </form> 
+    {% endblock %}
+    
+
+
+</body>
+</html>

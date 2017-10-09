@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.contrib.auth.views import login, logout
+from Doparti import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^register',views.register,name='register'),
+    url(r'^$',views.base,name='base')
+    #url(r'^login/$',views.log_user, name='login'),
+    #url(r'^logout/$', , name='logout'),
+    url(r'^login/$' [name='login'], include('django.contrib.auth.urls')),
 ]
