@@ -30,7 +30,7 @@ def base(request):
 
 def register(request):
     if request.method == 'POST':
-        form = MyRegistrationForm(request.POST)     # create form object
+        form = MyRegistrationForm(request.POST)     
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('/accounts/register_complete.html')
@@ -40,7 +40,7 @@ def register(request):
     print args
     return render(request, 'accounts/registration_form.html', args)
 
-
+"""
 def login_funcion(request):
     username = request.POST['username']
     password = request.POST['password']
@@ -51,7 +51,7 @@ def login_funcion(request):
         return redirect(request,'main.html')
     else:
         # Return an 'invalid login' error message.
-        return 
+        message.error(request, 'Error')
 
 
 
@@ -97,4 +97,4 @@ def login(request, user, backend=None):
     rotate_token(request)
     user_logged_in.send(sender=user.__class__, request=request, user=user)
         
-
+"""

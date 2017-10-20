@@ -58,6 +58,3 @@ class MyRegistrationForm(UserCreationForm):
         return user
 
 
-'''
-class MyLoginForm()
-'''
