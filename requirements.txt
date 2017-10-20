@@ -1,4 +1,8 @@
 Django==1.11.4
 django-crispy-forms==1.6.1
+<<<<<<< HEAD
 django-registration==2.2
+=======
+pkg-resources==0.0.0
+>>>>>>> d942c206d2906569adb504e02ababe6b126399b6
 pytz==2017.2
