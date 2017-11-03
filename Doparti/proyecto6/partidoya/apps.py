@@ -4,5 +4,5 @@ from __future__ import unicode_literals
 from django.apps import AppConfig
 
 
-class DopartiConfig(AppConfig):
-    name = 'Doparti'
+class PartidoyaConfig(AppConfig):
+    name = 'partidoya'
