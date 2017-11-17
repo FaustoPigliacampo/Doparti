@@ -36,6 +36,8 @@
             <div class="inner">
               <h3 class="masthead-brand">PartidoYa!</h3>
               <li><a href="">User : {{ user|upper }}</a></li>
+             
+              <a href={% url 'logout' %} class="btn btn-lg btn-secondary">logout</a>
               <nav class="nav nav-masthead">
               </nav>
             </div>

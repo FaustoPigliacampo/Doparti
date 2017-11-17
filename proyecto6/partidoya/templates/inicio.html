@@ -70,12 +70,12 @@
           </h1>
 
                   
-              {% for Cancha in canchas_all %}
+              {% for canchas in canchas_all %}
                   <div class="card mb-4">
                     <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
                     <div class="card-body">
-                      <h2 class="card-title">{{ Cancha.nombre }}</h2>
-                      <p class="card-text">{{ Cancha.direccion }}</p>
+                      <h2 class="card-title">{{ canchas.nombre }}</h2>
+                      <p class="card-text">{{ canchas.direccion }}</p>
                       <a href="#" class="btn btn-primary">Read More &rarr;</a>
                     </div>
                     <div class="card-footer text-muted">

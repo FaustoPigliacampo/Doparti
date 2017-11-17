@@ -36,3 +36,14 @@ def canchas_all(request):
     return render(request,
                     'inicio.html',
                     {'canchas_all':canchas})
+
+def vista_cancha(request):
+    nombre1 = request.GET['nombre']
+    direccion1 = request.GET['direccion']
+    if request.method == 'GET':
+        return render(request,
+                    'inicio.html',
+                    {'canchas_all':canchas})
+
+                    
+

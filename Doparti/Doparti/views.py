@@ -6,7 +6,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponseRedirect,HttpResponse
 from django.template.context_processors import csrf
 from Doparti.models import MyRegistrationForm
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 
 '''
 # Create your views here.
@@ -98,3 +98,6 @@ def login(request, user, backend=None):
     user_logged_in.send(sender=user.__class__, request=request, user=user)
         
 """
+def logout(request):
+    logout(request)
+    return redirect('base')
