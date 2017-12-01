@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+from django.core.mail import send_mail
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -103,8 +104,9 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/1.11/topics/i18n/
+STATIC_URL = '/static/'
+
+STATIC_ROOT = BASE_DIR + '/static/'
 
 LANGUAGE_CODE = 'es-AR'
 
@@ -116,11 +118,12 @@ USE_L10N = True
 
 USE_TZ = True
 
-LOGIN_URL = 'mysite_login'
+LOGIN_URL = '/login/'
 
-LOGOUT_URL = 'mysite_logout'
+LOGOUT_URL = '/logout/'
 
-LOGIN_REDIRECT_URL = 'marcador_bookmark_list'
+LOGIN_REDIRECT_URL = '/inicio/'
+LOGOUT_REDIRECT_URL = '/main/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
@@ -128,3 +131,10 @@ CRISPY_TEMPLATE_PACK = 'bootstrap3'
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+EMAIL_USE_TSL = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'dopartiya@gmail.com'
+EMAIL_HOST_PASSWORD = 'dopartiya123'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' 

@@ -37,7 +37,7 @@ urlpatterns = [
     url(r'^register',views.register,name='register'),
     url(r'^$',views.base,name='base'),
     url(r'^login/$', auth_views.login, {'template_name': 'login.html'}, name='login'),
-    url(r'^logout/$', auth_views.logout, {'template_name': 'logged_out.html'}, name='logout'),
+    url(r'^logout/$', auth_views.logout, {'template_name': 'main.html'}, name='logout'),
     #url(r'^login/$',views.log_user, name='login'),
     #url(r'^logout/$', , name='logout'),
     #url(r'^login/$', include('django.contrib.auth.urls')),
